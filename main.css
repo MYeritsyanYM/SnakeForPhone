@@ -1,0 +1,237 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+
+}
+
+body{
+    background-color: #003401;
+}
+
+.snake{
+   background-color: rgb(10, 82, 192);
+    border: #5a5a5a 1px dotted;
+}
+
+
+
+.food{  
+    /* background-color: red; */
+    border: rgb(194, 0, 0) 5px solid;
+}
+
+.wall{  
+    /* background-color: red; */
+    border: rgb(35, 222, 18) 5px solid;
+}
+
+
+#game-bord{
+    /* border-radius: 100px;  */
+   display: grid;
+   grid-template-columns: repeat(25,20px);
+   grid-template-rows: repeat(25,20px);
+   margin: 5px;
+}
+
+
+#game-border-1{
+    border: #595f43 solid 10px;
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 10px #595f43;
+}
+
+
+#game-border-2{
+    border: #abb78a solid 10px;
+    border-radius: 21px;
+    box-shadow: inset 0 0 0 10px #abb78a;
+}
+
+#game-border-3{
+    border: #8b966c solid 30px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 5px #8b966c;
+}
+
+#text, #text1{
+    position: absolute;
+    top: 60%;
+    color: #000;
+    width: 350px;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 30px;
+    margin: 8px 0;
+
+}
+
+.scores{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#logo, #logo1{
+    position: absolute; 
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+
+}
+
+#but1{
+    display: block;
+    width:500px;
+    position: absolute;
+    top: 90%;
+    text-align: center;
+    background-color:  #059215;
+    color: #fff;
+    border-radius: 15px;
+    padding: 15px 30px;
+    transition: all 700ms ease;
+    border: 0;
+    font-size: 17px;
+    margin-left:50%;
+}
+
+#but1:hover, #but2:hover, #but3:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: turquoise;
+}
+
+
+#but2{
+display: block;
+width:500px;
+position: absolute;
+top: 90%;
+text-align: center;
+background-color:  #059215;
+color: #fff;
+border-radius: 15px;
+padding: 15px 30px;
+transition: all 700ms ease;
+border: 0;
+font-size: 17px;
+margin-right:50%;
+}
+
+
+#but3{
+    display: block;
+    width:500px;
+    position: absolute;
+    top: 90%;
+    text-align: center;
+    background-color:  #059215;
+    color: #fff;
+    border-radius: 15px;
+    padding: 15px 30px;
+    transition: all 700ms ease;
+    border: 0;
+    font-size: 17px;
+    
+    }
+#score{
+    color: #abb78a;
+}
+
+#score,#Highscore{
+    font-size: 40px;
+    font-weight: bolder;
+    margin: 10px 0;
+}
+#Highscore{
+    color: #c4cfa3;
+    display: none;
+}
+
+ #game-border-3, #logo{ 
+    background-color:#c4cfa3 ;
+
+}
+
+
+
+.food {
+    border-radius: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+
+/* mobile css */
+
+/* Для мобильных устройств с шириной экрана меньше 600px */
+
+@media (max-width: 600px) {
+    #game-bord {
+        grid-template-columns: repeat(20, 15px);
+        grid-template-rows: repeat(20, 15px);
+    }
+
+    #but1, #but2, #but3 {
+        width: 250px;
+        padding: 10px;
+        font-size: 14px;
+        top: 85%;
+    }
+
+    #logo, #logo1 {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+/* Скрываем кнопки управления на экранах больше 600px */
+@media (min-width: 600px) {
+    #controls {
+         display: none;
+    }
+}
+
+/* Отображаем кнопки управления на мобильных устройствах */
+#controls{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+#controls button{
+    font-size: 24px;
+    padding: 10px;
+    margin: 5px;
+    background-color: #059215;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* Скрываем кнопки управления на экранах больше 600px
+@media (min-width: 600px) {
+    #controls {
+        display: none;
+    }
+}
+ */
+
